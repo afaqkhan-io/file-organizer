@@ -2,10 +2,8 @@
 
 A smart, automated Python script designed to clean up messy directories by instantly sorting files into dedicated, organized folders based on their file extensions. Built to optimize professional workflows, reduce clutter, and save time.
 
-<!-- Badges for Professional Look -->
-[![Python Version](https://shields.io)](https://python.org)
-[![License: MIT](https://shields.io)](https://opensource.org)
-[![Maintenance](https://shields.io)](https://github.com)
+`⚡ Runtime: Python 3.x` | `🛠️ Stack: Standard OS & Shutil` | `📄 License: MIT`
+
 
 ## 🚀 Key Features
 * **Dynamic File Categorization:** Automatically maps and routes files like Images, Documents, Videos, Music, and Archives into structured folders.
