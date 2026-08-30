@@ -1,18 +1,20 @@
 # 📁 Business File Organizer Automation
 
-A smart, automated Python script designed to clean up messy directories by instantly sorting files into dedicated, organized folders based on their file extensions. Built to optimize professional workflows, reduce clutter, and save time.
+A lightweight Python automation script that organizes files into folders based on their extensions. It is designed as a simple example of practical desktop file automation.
 
-`⚡ Runtime: Python 3.x` | `🛠️ Stack: Standard OS & Shutil` | `📄 License: MIT`
+`Python 3.x` · `Standard Library` · `MIT License`
 
+## 🚀 Features
 
-## 🚀 Key Features
-* **Dynamic File Categorization:** Automatically maps and routes files like Images, Documents, Videos, Music, and Archives into structured folders.
-* **Smart Duplicate Handling:** Appends incremental counters (e.g., photo_1.jpg) to filenames if a file with the same name already exists in the target folder, preventing accidental overwrites.
-* **Activity Logging System:** Generates a real-time `file_organizer.log` file tracking execution time, successfully moved files, and errors.
-* **Robust Error Handling:** Safely handles locked or busy files without crashing the entire automation process.
+- **Automatic categorization:** Sorts common images, documents, videos, music, and archive files.
+- **Duplicate handling:** Adds an incrementing suffix when a target filename already exists.
+- **Activity logging:** Records successful moves and errors in `file_organizer.log`.
+- **Error handling:** Continues processing when an individual file cannot be moved.
 
-## 📊 How It Works
-### Before Automation (Messy Folder)
+## 📊 Example
+
+Before:
+
 ```text
 test-files/
 ├── photo.jpg
@@ -23,7 +25,8 @@ test-files/
 └── movie.mp4
 ```
 
-### After Automation (Organized Structure)
+After:
+
 ```text
 test-files/
 ├── Documents/
@@ -39,46 +42,25 @@ test-files/
     └── random.zip
 ```
 
-## ⚙️ Configuration & Customization
-By default, the script scans the current directory where it is executed. If you want to customize target extensions or folder names, open `main.py` and modify the category dictionary:
+## ⚙️ Customization
 
-```python
-DIRECTORIES = {
-    "HTML": [".html", ".htm"],
-    "Images": [".jpg", ".jpeg", ".png", ".gif"],
-    "Documents": [".pdf", ".docx", ".xlsx", ".txt"],
-    "Videos": [".mp4", ".mkv", ".avi"],
-    "Music": [".mp3", ".wav"],
-    "Archives": [".zip", ".tar", ".rar"]
-}
+Edit the category dictionary in `main.py` to add or remove supported extensions and destination folders.
+
+## 📋 Requirements
+
+- Python 3.x
+- No third-party packages are required.
+
+## 💻 Setup & Usage
+
+```bash
+git clone https://github.com/afaqkhan-io/file-organizer.git
+cd file-organizer
+python main.py
 ```
 
-## 📋 Prerequisites
-* **Python 3.x** installed on your system.
-* No external libraries are required (Built entirely using Python's standard `os`, `shutil`, and `datetime` modules).
-
-## 💻 Quick Start & Setup
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com.git
-   ```
-2. **Navigate into the folder:**
-   ```bash
-   cd file-organizer
-   ```
-3. **Run the script:**
-   ```bash
-   python main.py
-   ```
-4. **Check the logs:** Open `file_organizer.log` to view the operation history.
-
-## 🤝 Contributing
-Contributions are welcome! If you want to add support for more file extensions or implement a GUI:
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+> **Important:** Run the script on a test directory first. The program moves files and can change the directory structure of the folder it scans.
 
 ## 📄 License
-Distributed under the **MIT License**. See `LICENSE` for more information.
+
+Distributed under the **MIT License**. See `LICENSE` for details.
